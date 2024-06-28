@@ -2,6 +2,8 @@
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -106,13 +108,68 @@
     <routinesParameter id="__SKx8DUrEe-3MIU-v0V3hw" name="TalendStringUtil"/>
     <routinesParameter id="__R33ADUrEe-3MIU-v0V3hw" name="TalendString"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9e23b6f2-eb77-4c87-ae0f-652207d99786"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>z+bDOHCVM+1MwBstrVy/++62PQ6YWvsO/rQdaxdreLUWgqy8zkAVysfpG9n90s0Ed18IrHtFtKoG&#13;
-MWat7M4Wnw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8905deff-835a-4ac4-abbf-c7e881138778"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LkbE+deP7Ch7MSeOhgcWG9/AD3PLva4cFhGxbm0PF3qzujBkqRQEXoAcTHqwO7On0M7+pRmzgE1x&#13;
-/SGwUlKHLA==</DigestValue></Reference></SignedInfo><SignatureValue>JI3r1LLe0LzFj6sPTe0UCb0ugGWaxOcUHTmB2HKrfw5Ek1rBpKtvrdN/HTf8aGQmHVe4E9Zr3Zuw&#13;
-+edl6l22zylsdLXIx4sIN+ARHU/qV4AgLVQlK0ajpstfdftHPde8cxhfFE3YAw/IFU5aiX4NBy8C&#13;
-8diB93PQDjZ8d5pWC9QBJRBS0jaPZLm06QIq4vcW6OAwwkIoOWexgizqQBiXC+EwzGcJhrfn+dFB&#13;
-JC9bwNZgZXzcwhMQyGvBTVOJ8Ock3wgsIDv6Fnk+hbFo6dwBrPXz7WMaDXm5fmIxJpEIvgYGkcNR&#13;
-btqUdi9/1y+XniRKJYRKIbJ/Kt7hvdHUIA7jhw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <node componentName="tDynamoDBInput" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDynamoDBInput_1"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="dynamodb_id"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="enc:system.encryption.key.v1:M5ko/j0M5tCF2ftXKySkyRBw0T7XxRf63VsAbouK"/>
+    <elementParameter field="CHECK" name="INHERIT_CREDENTIALS" value="false"/>
+    <elementParameter field="CHECK" name="ASSUME_ROLE" value="false"/>
+    <elementParameter field="TEXT" name="ARN" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ROLE_SESSION_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SESSION_DURATION" show="false" value="15"/>
+    <elementParameter field="CHECK" name="USE_ENDPOINT" value="false"/>
+    <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="OPENED_LIST" name="REGION" value="DEFAULT"/>
+    <elementParameter field="CLOSED_LIST" name="ACTION" value="QUERY"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="DynamoDB"/>
+    <elementParameter field="TEXT" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_INDEX" value="false"/>
+    <elementParameter field="TEXT" name="INDEX" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="KEY_CONDITION_EXPRESSION"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED_KEY_CONDITION_EXPRESSION" value="false"/>
+    <elementParameter field="TEXT" name="ADVANCED_KEY_CONDITION_EXPRESSION" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_FILTER_EXPRESSION" value="false"/>
+    <elementParameter field="TABLE" name="FILTER_EXPRESSION" show="false"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED_FILTER_EXPRESSION" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ADVANCED_FILTER_EXPRESSION" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="VALUE_MAPPING" show="false"/>
+    <elementParameter field="TABLE" name="NAME_MAPPING"/>
+    <elementParameter field="CHECK" name="SET_STS_ENDPOINT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="STS_ENDPOINT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="OPENED_LIST" name="SIGNING_REGION" show="false" value="DEFAULT"/>
+    <elementParameter field="TEXT" name="EXTERNALID" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SERIALNUMBER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TOKENCODE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="TAGS" show="false"/>
+    <elementParameter field="TABLE" name="POLICY_TABLE" show="false"/>
+    <elementParameter field="MEMO" name="POLICY" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDynamoDBInput_1"/>
+  </node>
+  <node componentName="tDBFSConnection" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBFSConnection_1"/>
+    <elementParameter field="TEXT" name="DATABRICKS_ENDPOINT" value="&quot;https://westeurope.azuredatabricks.net&quot;"/>
+    <elementParameter field="PASSWORD" name="DATABRICKS_TOKEN" value="enc:system.encryption.key.v1:1sODearpR78Md2IAG+C3fdE5L6l2siJdvtztQUv9"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDynamoDBInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBFSConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_38fdfa42-d804-4553-9bba-55c0067755c5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5pC4WtRohxTHaRHh5UhYLzpReDgCDD8kgLPcFpPEitiIOtho83SzUhyzKxeTy2sBgCAUU5Apjig1&#13;
+XcnrS/tTbg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6c6e00a5-b5c9-4c72-9248-8fa30fe1548b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>g6dQDasjUBCbTDHxpCoETmatTW9UzHIOIokKCozhrs/YQJNnuUK5s4kGRGSSidsYJalYW9TuPNUm&#13;
+6OmBhAyWcg==</DigestValue></Reference></SignedInfo><SignatureValue>fmBrYflvIDoP+Beiz4+7NAaMZLUhf3HLhar94TlBgnOl/q+j3enFu2bYJQQJxEcYkgvGx9uPdVJ1&#13;
+HZuw+GklkIIhG37K16+htH9nAcSIdeElzQ4YuxXn69qdTUPStPRAZuU4hXmDwJZ8wb0JZfbhqLnG&#13;
+2rDkBH5m6KEppP6wzK2L/wgdRhXNt7r4HZa/igVrLosiiiCnbEgSmbjGg4wQxH5kq2+OXBwANHo4&#13;
+z84Tf63hJLXpDkOg/OpP3FGNvWeCAFbXFXgvXZDgdsfgGDEmyRHnkjddgO7wmZvT3tkHUFUpQEWV&#13;
+aRtvHfeI2zKmMD+WiaIt1Tfn6sGym711DwqG7w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -134,4 +191,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8905deff-835a-4ac4-abbf-c7e881138778" Target="#_9e23b6f2-eb77-4c87-ae0f-652207d99786"><Timestamp>2024-06-28 10:16:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6c6e00a5-b5c9-4c72-9248-8fa30fe1548b" Target="#_38fdfa42-d804-4553-9bba-55c0067755c5"><Timestamp>2024-06-28 10:17:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
